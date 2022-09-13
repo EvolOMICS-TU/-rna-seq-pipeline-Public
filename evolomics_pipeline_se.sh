@@ -305,7 +305,7 @@ echo [`date +"%Y-%m-%d %H:%M:%S"`]"---------------Generating feature counts-----
 
 cd ~/$job/data/workflow_SE/results/samtools/
 
-featureCounts -T 50 -t exon -g transcript_id -a $gtf -o counts.txt -M *.bam	#resource limit #chiranjeevdas
+featureCounts -p -T 50 -t exon -g transcript_id -a $gtf -o counts.txt -M *.bam	#resource limit #chiranjeevdas
 	#-T number of threads
 
 echo "---------Done Generating count data-----------"
