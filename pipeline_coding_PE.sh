@@ -214,7 +214,7 @@ echo [`date +"%Y-%m-%d %H:%M:%S"`] "---------------Generating feature counts...-
 
 cd ~/projects/$proj/pipeline_result/$job/data/workflow_PE/results/samtools/
 
-featureCounts -T 50 -t gene -g gene_id -a $gtf_f -o counts.txt -M *.bam	#resource limit
+featureCounts -p -T 50 -t gene -g gene_id -a $gtf_f -o counts.txt -M *.bam	#resource limit
 	#-T number of threads
 
 echo [`date +"%Y-%m-%d %H:%M:%S"`] "---------Done Generating count data-----------"
